@@ -8,6 +8,10 @@ export default function NavBar() {
     // 페이지 간 클라이언트 측 경로 전환을 활성화하고 single-page app 경험을 제공하려면 Link컴포넌트가 필요
     // Just don't use `a` inside of `Link`, or use `legacyBehavior`
     // Link 에 legacyBehavior 를 넣어주시면 a 태그 사용이 가능하고 스타일도 입힐 수 있습니다.
+
+    // Image (No Img Element)
+    // HTML img 엘리먼트가 이미지를 표시하는 데 사용되었습니다.
+    // 더 나은 성능과 자동 이미지 최적화를 위해 Next.js의 내장 Image 컴포넌트를 사용하십시오.
     <nav>
       <img src="/vercel.svg" />
       <div>

@@ -9,18 +9,40 @@ export default function NavBar() {
     // Just don't use `a` inside of `Link`, or use `legacyBehavior`
     // Link 에 legacyBehavior 를 넣어주시면 a 태그 사용이 가능하고 스타일도 입힐 수 있습니다.
     <nav>
-      <Link legacyBehavior href="/">
-        <a className={router.pathname === "/" ? "active" : ""}>Home</a>
-      </Link>
-      <Link legacyBehavior href="/about">
-        <a className={router.pathname === "/about" ? "active" : ""}>About</a>
-      </Link>
+      <img src="/vercel.svg" />
+      <div>
+        <Link legacyBehavior href="/">
+          <a className={router.pathname === "/" ? "active" : ""}>Home</a>
+        </Link>
+        <Link legacyBehavior href="/about">
+          <a className={router.pathname === "/about" ? "active" : ""}>About</a>
+        </Link>
+      </div>
       <style jsx>{`
-        a {
-          text-decoration: none;
+        nav {
+          display: flex;
+          gap: 10px;
+          flex-direction: column;
+          align-items: center;
+          padding-top: 20px;
+          padding-bottom: 10px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+            rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+        img {
+          max-width: 100px;
+          margin-bottom: 5px;
+        }
+        nav a {
+          font-weight: 600;
+          font-size: 18px;
         }
         .active {
           color: tomato;
+        }
+        nav div {
+          display: flex;
+          gap: 10px;
         }
       `}</style>
     </nav>
